@@ -1,0 +1,9 @@
+.target
+./target
+.idea
+./.idea
+target
+**/**/node_modules
+*node_modules/*
+node_modules
+js/napi/node_modules

@@ -1,0 +1,30 @@
+{
+  "name": "@2048k/evm-node",
+  "version": "0.3.26",
+  "author": "Divy Srivastava <dj.srivastava23@gmail.com>",
+  "license": "MIT",
+  "napi": {
+    "name": "2048k_evm_node"
+  },
+  "files": [
+    "*.node",
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --dts index.d.ts --js index.js",
+    "build-release": "napi build --platform --release --dts index.d.ts --js index.js",
+    "test": "ts-jest"
+  },
+  "dependencies": {
+    "detect-libc": "^1.0.3",
+    "jest": "^28.1.0"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.0.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^17.0.40",
+    "ts-jest": "^29.1.2"
+  }
+}

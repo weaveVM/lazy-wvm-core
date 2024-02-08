@@ -1,0 +1,16 @@
+[workspace]
+members = [
+    "./crates/evm",
+]
+exclude = [
+    # Node API bindings
+    "./js/napi",
+]
+resolver = "2"
+
+[profile.release]
+lto = true
+
+[profile.release.package.bench]
+opt-level = 3
+codegen-units = 1

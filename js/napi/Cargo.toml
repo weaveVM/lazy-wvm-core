@@ -1,0 +1,27 @@
+[package]
+name = "twenty48k_evm_node"
+authors = ["andreespirela <andreespirela@outlook.com>"]
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = 3
+lto = true
+
+[dependencies]
+napi = { version = "2", features = ["serde-json", "async"] }
+serde_json = "1"
+tokio = { version = "1.10.1", features = ["full"] }
+napi-derive = "2"
+twenty48k_evm = { version = "0.1.0", path = "../../crates/evm" }
+primitive-types = { default-features = false, version = "0.12.2" }
+hex = "0.4.3"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+jemallocator = { version = "0.3.2", features = ["disable_initial_exec_tls"] }
+
+[build-dependencies]
+napi-build = { version = "1" }

@@ -1,0 +1,16 @@
+[package]
+name = "twenty48k_evm"
+version = "0.1.0"
+authors = ["andreespirela <andreespirela@outlook.com>"]
+edition = "2021"
+resolver = "2"
+description = ""
+license = "MIT"
+
+[lib]
+path = "lib.rs"
+
+[dependencies]
+evm = { version = "0.41.1", features = ["with-serde"] }
+primitive-types = { default-features = false, version = "0.12.2" }
+hex = "0.4.3"
