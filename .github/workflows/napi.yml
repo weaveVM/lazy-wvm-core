@@ -42,7 +42,9 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.10.2
       - name: Setup node
         uses: actions/setup-node@v4
         with:
@@ -155,7 +157,9 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.10.2
       - name: Setup node
         uses: actions/setup-node@v4
         with:
@@ -191,7 +195,9 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.10.2
       - name: Setup node
         uses: actions/setup-node@v4
         with:
