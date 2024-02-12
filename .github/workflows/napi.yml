@@ -24,19 +24,19 @@ jobs:
           - os: macos-latest
             target: x86_64-apple-darwin
             arch: x64
-            build: pnpm run build-release; strip -x *.node
+            build: yarn build-release; strip -x *.node
             use_sysroot: false
 
           - os: windows-latest
             target: x86_64-pc-windows-msvc
             arch: x64
-            build: pnpm run build-release
+            build: yarn build-release
             use_sysroot: false
 
           - os: ubuntu-20.04
             target: x86_64-unknown-linux-gnu
             arch: x64
-            build: pnpm run build --release
+            build: yarn run build --release
             use_sysroot: true
 
     steps:
@@ -181,7 +181,7 @@ jobs:
 
       - name: Test bindings
         working-directory: ./js/napi
-        run: pnpm run test
+        run: yarn run test
 
   publish:
     name: publish
@@ -212,7 +212,7 @@ jobs:
 
       - name: Move artifacts
         working-directory: ./js/napi
-        run: pnpm run artifacts
+        run: yarn run artifacts
 
       - name: List packages
         working-directory: ./js/napi
