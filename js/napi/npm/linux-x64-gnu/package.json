@@ -1,0 +1,16 @@
+{
+  "name": "@2048k/evm-node-linux-x64-gnu",
+  "version": "0.1.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "2048k_evm_node.linux-x64-gnu.node",
+  "files": [
+    "2048k_evm_node.linux-x64-gnu.node"
+  ],
+  "author": "Andres Pirela <andreespirela@outlook.com>",
+  "license": "MIT"
+}

@@ -1,6 +1,6 @@
 {
   "name": "@2048k/evm-node",
-  "version": "0.3.26",
+  "version": "0.1.0",
   "author": "Divy Srivastava <dj.srivastava23@gmail.com>",
   "license": "MIT",
   "napi": {

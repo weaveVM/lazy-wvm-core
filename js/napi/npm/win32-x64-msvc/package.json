@@ -1,0 +1,16 @@
+{
+  "name": "@2048k/evm-node-win32-x64-msvc",
+  "version": "0.1.0",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "2048k_evm_node.win32-x64-msvc.node",
+  "files": [
+    "2048k_evm_node.win32-x64-msvc.node"
+  ],
+  "author": "Andres Pirela <andreespirela@outlook.com>",
+  "license": "MIT"
+}

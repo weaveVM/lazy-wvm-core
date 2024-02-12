@@ -1,0 +1,16 @@
+{
+  "name": "@2048k/evm-node-darwin-arm64",
+  "version": "0.1.0",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "2048k_evm_node.darwin-arm64.node",
+  "files": [
+    "2048k_evm_node.darwin-arm64.node"
+  ],
+  "author": "Andres Pirela <andreespirela@outlook.com>",
+  "license": "MIT"
+}
