@@ -7,7 +7,7 @@ on:
 
 env:
   DEBUG: napi:*
-  APP_NAME: twenty48k_evm_node
+  APP_NAME: 2048k_evm_node
   MACOSX_DEPLOYMENT_TARGET: '10.13'
 
 jobs:
