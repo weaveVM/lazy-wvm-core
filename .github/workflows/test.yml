@@ -1,0 +1,44 @@
+name: rust / test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: 1
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / ${{ matrix.target }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            target: x86_64-unknown-linux-gnu
+
+          - os: windows-latest
+            target: x86_64-pc-windows-msvc
+
+          - os: macos-latest
+            target: x86_64-apple-darwin
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Use Cache
+        uses: Swatinem/rust-cache@v1
+
+      - name: Run Tests
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+          args: --color always --target ${{ matrix.target }}
