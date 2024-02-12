@@ -19,7 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-20.04, windows-latest, macos-latest]
-        node: [14, 16]
+        node: [16]
         include:
           - os: macos-latest
             target: x86_64-apple-darwin
@@ -118,10 +118,8 @@ jobs:
           __0
 
       - name: Install Node Dependencies
-        uses: bahmutov/npm-install@v1
-        with:
-          working-directory: ./js/napi
-          useLockFile: false
+        working-directory: ./js/napi
+        run: pnpm install
 
       - name: Build
         working-directory: ./js/napi
@@ -168,10 +166,8 @@ jobs:
           cache-dependency-path: js/napi/pnpm-lock.yaml
 
       - name: Install Node Dependencies
-        uses: bahmutov/npm-install@v1
-        with:
-          working-directory: ./js/napi
-          useLockFile: false
+        working-directory: ./js/napi
+        run: pnpm install
 
       - name: Download artifacts
         uses: actions/download-artifact@v2
@@ -206,10 +202,8 @@ jobs:
           cache-dependency-path: js/napi/pnpm-lock.yaml
 
       - name: Install Node Dependencies
-        uses: bahmutov/npm-install@v1
-        with:
-          working-directory: ./js/napi
-          useLockFile: false
+        working-directory: ./js/napi
+        run: pnpm install
 
       - name: Download all artifacts
         uses: actions/download-artifact@v2
