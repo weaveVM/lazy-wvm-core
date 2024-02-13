@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "author": "Divy Srivastava <dj.srivastava23@gmail.com>",
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "napi": {
     "name": "2048k_evm_node"
   },
   "files": [
     "*.node",
     "index.js",
-    "index.d.ts"
+    "index.d.ts",
+    "dist"
   ],
   "scripts": {
     "artifacts": "napi artifacts",
