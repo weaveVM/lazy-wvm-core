@@ -220,6 +220,7 @@ jobs:
         shell: bash
 
       - name: TSC
+        working-directory: ./js/napi
         run: pnpm run tsc
 
       - name: Publish
