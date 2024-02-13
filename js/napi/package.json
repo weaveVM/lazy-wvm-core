@@ -18,16 +18,18 @@
     "artifacts": "napi artifacts",
     "build": "napi build --platform --dts index.d.ts --js index.js",
     "build-release": "napi build --platform --release --dts index.d.ts --js index.js",
-    "test": "ts-jest"
+    "test": "ts-jest",
+    "tsc": "tsc"
   },
   "dependencies": {
-    "detect-libc": "^1.0.3",
-    "jest": "^28.1.0"
+    "detect-libc": "^2.0.2",
+    "jest": "^29.7.0"
   },
   "devDependencies": {
-    "@napi-rs/cli": "^2.0.0",
+    "@napi-rs/cli": "^2.18.0",
     "@types/jest": "^29.5.12",
-    "@types/node": "^17.0.40",
-    "ts-jest": "^29.1.2"
+    "@types/node": "^20.11.17",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
   }
 }
