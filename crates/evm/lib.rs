@@ -1,8 +1,6 @@
 pub mod miscalleneous;
 
 use crate::miscalleneous::{CallData, Evm, EvmContract, EvmOpts, EvmRt};
-use evm::backend::MemoryAccount;
-use evm::executor::stack::PrecompileFn;
 use evm::ExitReason;
 use primitive_types::{H160, U256};
 use std::collections::BTreeMap;
